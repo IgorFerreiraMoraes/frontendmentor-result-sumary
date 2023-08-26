@@ -153,15 +153,84 @@ body {
 .attribute p span {
 	margin-left: 0.45rem;
 	opacity: 0.75;
+	font-weight: 500;
 }
 
 button {
 	width: 100%;
 	border: transparent;
-	background-color: var(--dark-gray-blue);
+	background: var(--dark-gray-blue);
 	color: var(--white);
 	padding: 1rem;
 	border-radius: 2rem;
 	font-size: 1.15rem;
 	font-family: 'Hanken Grotesk';
+}
+button:is(:focus, :hover) {
+	background: var(--blue-gradient);
+}
+
+@media (width > 1024px) {
+	:root {
+		font-size: 20px;
+	}
+	body {
+		min-height: 100vh;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.result {
+		border-radius: 1.7rem;
+		gap: 1.9rem;
+		height: clamp(25rem, 47.5vh, 100vh);
+		width: 25.5%;
+	}
+	.result h2 {
+		font-size: 1.2rem;
+	}
+
+	.score p {
+		font-size: 0.95rem;
+		font-weight: 200;
+	}
+	.congratulation {
+		margin: 0.1rem;
+	}
+	.compare {
+		width: 68%;
+		margin: auto;
+		font-size: 0.9rem;
+	}
+
+	.summary {
+		min-height: 47.5vh;
+		width: 25.5%;
+		margin: 0;
+		padding: 1.9rem 2rem;
+		border-radius: 0 2rem 2rem 0;
+		box-shadow: 4px 16px 56px 0 hsla(234, 85%, 45%, 0.12);
+	}
+	.summary h2 {
+		font-size: 1.2rem;
+		font-weight: 700;
+	}
+
+	.attribute {
+		gap: 0.65rem;
+		padding: 0.85rem 0.82rem;
+		margin-bottom: 0.8rem;
+	}
+	.attribute h3 {
+		font-size: 0.9rem;
+	}
+	.attribute p span {
+		margin-left: 0.1rem;
+	button {
+		margin-top: 1.15rem;
+		padding: 0.81rem;
+		font-size: 0.91rem;
+	}
 }
