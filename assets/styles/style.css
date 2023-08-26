@@ -14,6 +14,11 @@
 	--green-teal: hsl(166, 100%, 37%);
 	--cobalt-blue: hsl(234, 85%, 45%);
 
+	--light-red-transparent: hsla(0, 100%, 67%, 0.05);
+	--orangey-yellow-transparent: hsla(39, 100%, 56%, 0.05);
+	--green-teal-transparent: hsla(166, 100%, 37%, 0.05);
+	--cobalt-blue-transparent: hsla(234, 85%, 45%, 0.05);
+
 	--blue-gradient: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
 	--purple-gradient: linear-gradient(
 		hsla(256, 72%, 46%, 1),
@@ -31,6 +36,7 @@ body {
 	font-size: 18px;
 
 	background-color: var(--white);
+	color: var(--dark-gray-blue);
 }
 
 .result {
@@ -44,12 +50,118 @@ body {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	gap: 1.7rem;
 
 	color: var(--light-lavender);
+	padding-bottom: 1.5rem;
+	padding-top: 0.6rem;
+}
+.result h2 {
+	font-size: 1.1rem;
+	font-weight: 500;
+}
+
+.result-text {
+	text-align: center;
 }
 
 .compare {
 	width: 65%;
+	margin: auto;
+	font-size: 0.96rem;
+}
+.score {
+	background: var(--purple-gradient);
 
+	aspect-ratio: 1 / 1;
+	border-radius: 50%;
+	height: 42%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+.score p {
+	opacity: 0.75;
 	font-size: 0.95rem;
+}
+.avarage-score {
+	color: var(--white);
+	display: block;
+	font-size: 3.5rem;
+	font-weight: 700;
+}
+
+.congratulation {
+	color: var(--white);
+	font-size: 1.55rem;
+	font-weight: 500;
+	margin-bottom: 0.3rem;
+}
+
+.summary {
+	margin: 1.5rem 1.85rem;
+}
+.summary h2 {
+	font-size: 1.16rem;
+	font-weight: 900;
+	margin-bottom: 1.3rem;
+}
+
+.attribute {
+	display: flex;
+	justify-content: center;
+	gap: 0.72rem;
+	padding: 1rem;
+	margin-bottom: 1.3rem;
+	border-radius: 0.5rem;
+}
+.attribute.reaction {
+	background-color: var(--light-red-transparent);
+}
+.attribute.reaction h3 {
+	color: var(--light-red);
+}
+.attribute.memory {
+	background-color: var(--orangey-yellow-transparent);
+}
+.attribute.memory h3 {
+	color: var(--orangey-yellow);
+}
+.attribute.verbal {
+	background-color: var(--green-teal-transparent);
+}
+.attribute.verbal h3 {
+	color: var(--green-teal);
+}
+.attribute.visual {
+	background-color: var(--cobalt-blue-transparent);
+}
+.attribute.visual h3 {
+	color: var(--cobalt-blue);
+}
+
+.attribute h3 {
+	font-size: 1rem;
+	font-weight: 500;
+}
+.attribute p {
+	margin-left: auto;
+	font-weight: 900;
+	font-size: 0.9rem;
+}
+.attribute p span {
+	margin-left: 0.45rem;
+	opacity: 0.75;
+}
+
+button {
+	width: 100%;
+	border: transparent;
+	background-color: var(--dark-gray-blue);
+	color: var(--white);
+	padding: 1rem;
+	border-radius: 2rem;
+	font-size: 1.15rem;
+	font-family: 'Hanken Grotesk';
 }
