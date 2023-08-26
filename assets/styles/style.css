@@ -228,6 +228,7 @@ button:is(:focus, :hover) {
 	}
 	.attribute p span {
 		margin-left: 0.1rem;
+	}
 	button {
 		margin-top: 1.15rem;
 		padding: 0.81rem;
